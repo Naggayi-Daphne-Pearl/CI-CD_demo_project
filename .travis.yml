@@ -16,4 +16,4 @@ deploy:
   skip_cleanup: true
   keep-history: true
   api-key: HEROKU_API_KEY
-  app: your_heroku_app_name
+  app: studnt-portal
