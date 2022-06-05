@@ -7,7 +7,7 @@ const registerStudent = async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
     const student = await Student.create(...req.body);
-    res.redirect("/login");
+    res.status(200).redirect("/login");
     logger.info("student successfully registered");
   } catch (error) {
     logger.error(error);
