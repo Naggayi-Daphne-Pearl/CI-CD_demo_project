@@ -14,7 +14,8 @@ describe('register student',()=>{
   chai.request('http://localhost:5000')
   .get('/register')
   .end((err,res)=>{
-   res.should.have.status(200);
+   // res.should.have.status(200);
+   expect(res.status).to.be(200)
    expect(err).to.be.null;
    res.body.should.have.property('name'); 
    expect(attributes.name).to.eql('string');
@@ -27,7 +28,8 @@ describe('register student',()=>{
     chai.request('http://localhost:5000')
     .get('/register')
     .end((err,res)=>{
-     res.should.have.status(404);
+   //   res.should.have.status(404);
+      expect(res.status).to.be(404)
      expect(err).to.be.null;
      logger.error('test failed');
      done();
