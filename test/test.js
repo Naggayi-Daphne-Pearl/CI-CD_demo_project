@@ -1,6 +1,3 @@
-const dotenv = require("dotenv");
-dotenv.config();
-
 const chai=require('chai');
 const chaiHttp=require('chai-http');
 chai.use(chaiHttp);
